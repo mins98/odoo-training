@@ -1,5 +1,5 @@
 {
-    'name': 'Odoo Academy',
+    'name': 'odoo_training',
     "summary":"""Module to handle courses and sessions""",
     "description":"""Module to handle:
         - Courses
