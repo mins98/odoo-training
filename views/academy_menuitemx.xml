@@ -11,6 +11,18 @@
             </p>
         </field>
     </record>
+
+    <record id="session_list_action" model="ir.actions.act_window">
+        <field name="name">Session List</field>
+        <field name="res_model">odoo_training.session</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face" >
+                Create the first session
+            </p>
+        </field>
+    </record>
+
     <menuitem
         id="menu_academy"
         name="Odoo Academy"
@@ -20,11 +32,17 @@
             id="menu_academy_sub"
             name="Odoo Academy"
             sequence="1">
-            <menuitem
-                id="menu_academy_courses"
-                name="Courses"
-                sequence="2" action="course_list_action"/>
-            </menuitem>
+                <menuitem
+                    id="menu_academy_courses"
+                    name="Courses"
+                    sequence="2" action="course_list_action"/>
+                <menuitem
+                id="menu_academy_session"
+                name="Session"
+                sequence="3" action="session_list_action"/>
+        </menuitem>
+           
+     
     </menuitem>
 
 </odoo>
