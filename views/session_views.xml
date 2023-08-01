@@ -12,17 +12,27 @@
                     <group>
                         <group>
                             <separator string="Session Data"/>
+                        
+                            <field name="course_id"></field>
+                            <field name="instructor_id"></field>
                             <label string="Date" for="date_start"/>
                             <div class="o_row">
                                 <field name="date_start" widget="daterange" options="{'related_end_date':'date_end'}" class="oe_label" nolabel="1"/>
                                 <field name="date_end" widget="daterange" options="{'related_start_date':'date_start'}" class="oe_label" nolabel="1"/>
                             </div>
+                            <field name="duration"/>
                         </group>
                         <group>
                             <separator string="Other Fields"/>
                           
                         </group>
                     </group>
+                    <notebook>
+                        <page string="Description">
+                            <field name="description"/>
+                            
+                        </page>
+                     </notebook>
                 </sheet>
 
             </form>
@@ -35,6 +45,8 @@
             <tree string="Session List">
                 <field name="name"/>
                 <field name="session_number"/>
+                <field name="course_id"/>
+                <field name="instructor_id"/>    
                 <field name="date_start"/>
                 <field name="date_end"/>
             </tree>
@@ -49,6 +61,10 @@
                 <field name="name"/>
                 <field name="session_number"/>
                 <filter name="start_date" string="Start Date" date="date_start" />
+                <searchpanel >
+                    <field name="course_id" select="multi" enable_counters="1"/>
+                
+                </searchpanel>
             </search>
         </field>
     </record>

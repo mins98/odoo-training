@@ -16,11 +16,15 @@
                     </group>
                     <group>
                         <separator string="Other Fields"/>
+                        <field name="base_price"></field>
+                        <field name="additional_fee"></field>
+                        <field name="total_price"></field>
                     </group>
                  </group>
                  <notebook>
                     <page string="Description">
                         <field name="description"/>
+                        
                     </page>
                  </notebook>
                 </sheet>
