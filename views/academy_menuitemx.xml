@@ -4,7 +4,7 @@
     <record id="course_list_action" model="ir.actions.act_window">
         <field name="name">Course List</field>
         <field name="res_model">odoo_training.course</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">pivot,tree,form</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face" >
                 Create the first Course
@@ -15,7 +15,7 @@
     <record id="session_list_action" model="ir.actions.act_window">
         <field name="name">Session List</field>
         <field name="res_model">odoo_training.session</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">calendar,tree,form</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face" >
                 Create the first session

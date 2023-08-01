@@ -68,4 +68,21 @@
             </search>
         </field>
     </record>
+
+    <record id="session_view_calendar" model="ir.ui.view">
+        <field name="name">session.view.calendar</field>
+        <field name="model">odoo_training.session</field>
+        <field name="arch" type="xml">
+            <calendar string="Sessions calendar" 
+            date_start="date_start" 
+            date_stop="date_end"
+            color="instructor_id"
+            mode="month">
+<!--el color define segun que atributo se asignaran los colores a cada actividad del calendario-->
+<!--los campos que se pongan son los que tendran las tarjetas de info de cada actividad-->
+            <field name="instructor_id" filters="1" avatar_field="avatar_128"/>
+
+            </calendar>
+        </field>
+    </record>
 </odoo>
