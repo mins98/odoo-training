@@ -16,9 +16,9 @@
                     </group>
                     <group>
                         <separator string="Other Fields"/>
-                        <field name="base_price"></field>
-                        <field name="additional_fee"></field>
-                        <field name="total_price"></field>
+                        <field name="base_price"/>
+                        <field name="additional_fee"/>
+                        <field name="total_price"/>
                     </group>
                  </group>
                  <notebook>

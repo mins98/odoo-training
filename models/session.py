@@ -6,7 +6,7 @@ class Session( models.Model):
     _name="odoo_training.session"
     _description="Session info"
     
-    name=fields.Char(string="Title")
+    name = fields.Char(string="Tittle", related="course_id.name", readonly=False)
     session_number=fields.Char(string="Session Number",
                                default="S0000", copy=False, required=True, readonly=True)
     
@@ -21,12 +21,13 @@ class Session( models.Model):
     
     course_id=fields.Many2one(comodel_name="odoo_training.course", string='Course', ondelete='Cascade', required=True)
     instructor_id=fields.Many2one(comodel_name="res.users", string='Intructor', ondelete='restrict')
-    students_id=fields.Many2many(comodel_name="res.partner", string='Students')
+    student_ids = fields.Many2many(comodel_name="res.partner", string="Students")
     "students vaz en plural por el many 2 many"
     
     "para poder acceder a algun campo de un modelo relacionado, hay que hacer una referencia"
     "aqui se accedera a la descripcion del curso"
     description=fields.Text(related="course_id.description")
+   
     @api.model_create_multi
     def create(self,vals_list):
         for vals in vals_list:

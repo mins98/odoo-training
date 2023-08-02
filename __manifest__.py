@@ -10,7 +10,7 @@
     'author': 'Miguel',
     'website':'www.odoo.com',
     'category': 'Custom Modules/Tech Training',
-    'depends':  ['base'],
+    'depends':  ['sale'],
     'data':  [
         'security/academy_groups.xml',
         'security/ir.model.access.csv',
@@ -19,6 +19,10 @@
         'views/academy_menuitemx.xml',
         'views/course_views.xml',
         'views/session_views.xml',
+        'views/sales_views_inherit.xml',
+        'views/product_view_inherit.xml',
+        'wizard/sale_wizard_view.xml',
+        'report/session_report_templates.xml',
         ],
     'demo':  [
         'demo/course_demo.xml',

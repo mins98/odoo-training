@@ -19,10 +19,8 @@ class Course(models.Model):
                            ], copy=False)
     
     "Como la sesion en many2one aqui es one2many su opuesto"
-    
-    sesion_ids=fields.One2many(comodel_name="odoo_training.session", string="Session", inverse_name="course_id") 
     "el inverse_name es el nombre del id de la relacion del otro modelo"
-    
+    session_ids = fields.One2many(comodel_name="odoo_training.session", string="Session", inverse_name="course_id")
     currency_id = fields.Many2one(comodel_name="res.currency", string="Currency", default=lambda self:self.env.company.currency_id.id)
     base_price = fields.Monetary(string="Base Price", currency_field="currency_id")
     additional_fee = fields.Monetary(string="Additional Fee", currency_field="currency_id", default="0")

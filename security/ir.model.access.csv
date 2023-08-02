@@ -5,3 +5,6 @@ course_read_all,course read_all,model_odoo_training_course,,1,0,0,0
 session_admin,session admin,model_odoo_training_session,group_academy_admin,1,1,1,1
 session_user,session user,model_odoo_training_session,group_academy_user,1,1,0,0
 session_read_all,session read all,model_odoo_training_session,,1,0,0,0
+sale_wizard_admin,sale wizard admin,model_odoo_training_sale_wizard,group_academy_admin,1,1,1,1
+sale_wizard_user,sale wizard user,model_odoo_training_sale_wizard,group_academy_user,1,1,0,0
+sale_wizard_read_all,sale wizard read all,model_odoo_training_sale_wizard,,1,0,0,0
